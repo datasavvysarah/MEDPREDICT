@@ -53,7 +53,7 @@ The dataset consists of historical records tracking key health and demographic a
 * **Feature Scaling:** Continuous variables are scaled using `StandardScaler`.
 * **Status:** The dataset is fully processed and ready for exploratory data analysis (EDA), model training, and performance evaluation using Linear Regression and Decision Tree Regressor models.
 
-* ## ⚙️ Data Inspection
+* ## ⚙️ Data Importation and Inspection
 
 Below is the execution workflow covering data import, and  inspection:
 
