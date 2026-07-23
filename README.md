@@ -9,26 +9,6 @@ This project focuses on predicting individual medical insurance costs using hist
 
 ---
 
-##  Tools and Libraries Used
-Here are the tools, libraries, and specific modules used to clean, preprocess, train, and evaluate predictive models on the data:
-
-* **Language:** Python 3
-* **Environment:** Jupyter Notebook
-* **Data Manipulation & Math:**
-  * `pandas` - For data manipulation, cleaning, and table structuring
-  * `numpy` - For numerical operations and array transformations
-* **Data Visualization:**
-  * `matplotlib.pyplot` - For creating custom statistical charts and plot layouts
-  * `seaborn` - For enhanced statistical data visualization and heatmaps
-* **Machine Learning (`scikit-learn`):**
-  * `sklearn.preprocessing`: `LabelEncoder`, `StandardScaler` - For categorical feature encoding and numerical feature scaling
-  * `sklearn.model_selection`: `train_test_split` - For partitioning data into training and testing sets
-  * `sklearn.linear_model`: `LinearRegression` - For baseline parametric modeling
-  * `sklearn.tree`: `DecisionTreeRegressor` - For non-linear tree-based regression modeling
-  * `sklearn.metrics`: `mean_absolute_error`, `mean_squared_error`, `r2_score` - For evaluating regression model performance
-
----
-
 ##  The Data Layout
 The dataset consists of historical records tracking key health and demographic attributes of individual beneficiaries:
 
@@ -52,8 +32,7 @@ The dataset consists of historical records tracking key health and demographic a
 * **Feature Scaling:** Continuous variables are scaled using `StandardScaler`.
 * **Status:** The dataset is fully processed and ready for exploratory data analysis (EDA), model training, and performance evaluation using Linear Regression and Decision Tree Regressor models.
 
-* ## ⚙️ Data Importation and Inspection
-
+## Data Importation and inspection
 Below is the execution workflow covering data import, and  inspection:
 
 ```python
@@ -61,14 +40,7 @@ Below is the execution workflow covering data import, and  inspection:
 import numpy as np
 np.set_printoptions(suppress=True)
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 2. Importing the Dataset
 data = pd.read_csv("/content/insurance.csv")
