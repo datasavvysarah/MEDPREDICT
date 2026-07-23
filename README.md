@@ -4,12 +4,12 @@ MEDICAL INSURANCE COST PREDICTION Group 15
 # Medical-Insurance-Cost-Prediction
 A machine learning regression project that predicts individual medical health insurance charges based on demographic, lifestyle, and health-related features.
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on predicting individual medical insurance costs using historical beneficiary data sourced from Kaggle. This task falls under **Supervised Learning** because the dataset contains historical records where both features (input variables such as age, BMI, and smoker status) and the continuous **target variable** (`charges`) are explicitly provided. Furthermore because the target variable is continuous (a numerical dollar amount spanning a real-value range), this problem is modeled as a **regression task** rather than a classification problem.
 
 ---
 
-## 🛠️ Tools and Libraries Used
+##  Tools and Libraries Used
 Here are the tools, libraries, and specific modules used to clean, preprocess, train, and evaluate predictive models on the data:
 
 * **Language:** Python 3
@@ -29,7 +29,7 @@ Here are the tools, libraries, and specific modules used to clean, preprocess, t
 
 ---
 
-## 📂 The Data Layout
+##  The Data Layout
 The dataset consists of historical records tracking key health and demographic attributes of individual beneficiaries:
 
 | Feature | Description | Data Type |
@@ -44,7 +44,6 @@ The dataset consists of historical records tracking key health and demographic a
 
 ---
 
-## 🔍 Key Observations & Data Summary
 * **Total Rows:** 1,338
 * **Total Columns:** 7
 * **Missing Values:** None (the dataset is complete across all columns)
