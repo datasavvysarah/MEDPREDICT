@@ -14,13 +14,13 @@ The dataset consists of historical records tracking key health and demographic a
 
 | Feature | Description | Data Type |
 | :--- | :--- | :--- |
-| `age` | Age of the primary beneficiary | Integer |
-| `sex` | Gender of the beneficiary (`male`, `female`) | Object |
-| `bmi` | Body Mass Index ($\text{kg/m}^2$) | Float |
-| `children` | Number of children covered by health insurance | Integer |
-| `smoker` | Smoking status (`yes`, `no`) | Object |
-| `region` | Residential area (`northeast`, `northwest`, `southeast`, `southwest`) | Object |
-| `charges` | Individual medical costs billed by health insurance (**Target Variable**) | Float |
+| age | Age of the primary beneficiary | Integer |
+| sex | Gender of the beneficiary (male, female) | Object |
+| bmi | Body Mass Index ($\text{kg/m}^2$) | Float |
+| children | Number of children covered by health insurance | Integer |
+| smoker | Smoking status (yes, no) | Object |
+| region | Residential area (northeast, northwest, southeast, southwest) | Object |
+| charges | Individual medical costs billed by health insurance (**Target Variable**) | Float |
 
 ---
 
@@ -28,8 +28,8 @@ The dataset consists of historical records tracking key health and demographic a
 * **Total Columns:** 7
 * **Missing Values:** None (the dataset is complete across all columns)
 * **Duplicate Rows:** 1 (handled during the data cleaning phase)
-* **Categorical Encoding:** Categorical variables (`sex`, `smoker`, `region`) are encoded using `LabelEncoder` for model compatibility.
-* **Feature Scaling:** Continuous variables are scaled using `StandardScaler`.
+* **Categorical Encoding:** Categorical variables (sex, smoker, region) are encoded using `LabelEncoder` for model compatibility.
+* **Feature Scaling:** Continuous variables are scaled using StandardScaler.
 * **Status:** The dataset is fully processed and ready for exploratory data analysis (EDA), model training, and performance evaluation using Linear Regression and Decision Tree Regressor models.
 
 ## Data Importation and inspection
@@ -38,7 +38,6 @@ Below is the execution workflow covering data import, and  inspection:
 ```python
 1. Import Required Libraries and Modules
 import numpy as np
-np.set_printoptions(suppress=True)
 import pandas as pd
 
 
@@ -47,9 +46,11 @@ data = pd.read_csv("/content/insurance.csv")
 
 3. Data Inspection
 print("Dataset Shape:", data.shape)  # Returns (1338, 7)
+
+4. Data Preview
 data.info()
 
-4. Null Value Checks 
+5. Null Value Checks 
 **  Checking for null values in numerical data 
 if data.select_dtypes("object").isnull().sum().sum() == 0:
     print("No Null Values Found")
@@ -62,11 +63,5 @@ if data.select_dtypes("int64", "float64").isna().sum().sum() == 0:
 else:
   print("Missing Values:\n", data.isna().sum())
 
-5. Checking for duplicates
-print("\nDuplicate Rows Count:", data.duplicated().sum())
-
-# Dropping the duplicate record, using the 'inplace=True' saves the change to the Dataframe
-data.drop_duplicates(inplace=True)
-
-# Print again to confirm no duplicate
+6. Checking for duplicates
 print("\nDuplicate Rows Count:", data.duplicated().sum())
